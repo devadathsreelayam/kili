@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#top {
+    background-image: url('img/full.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.container h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    line-height: 110%;
+    text-align: left;
+    color: #f1f1f1;
+    text-shadow: 3px 3px rgb(226, 25, 69);
+    margin-top: 150px;
+    overflow: hidden;
+}
+
+h1 span {
+    display: block;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below its position */
+    animation: appear 1s forwards; /* Apply animation */
+}
+
+/* Animation for appearing effect */
+@keyframes appear {
+    from {
+        opacity: 0; /* Start from hidden */
+        transform: translateY(20px); /* Start from below */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* End at its normal position */
+    }
+}
+
+/* Delay each line's animation */
+h1 span:nth-child(1) {
+    animation-delay: 0.5s; /* Adjust delay as needed */
+}
+
+h1 span:nth-child(2) {
+    animation-delay: 1s; /* Adjust delay as needed */
+}
+
+h1 span:nth-child(3) {
+    animation-delay: 1.5s; /* Adjust delay as needed */
+}
+
+#top img {
+    width: 15vh;
+    height: auto;
+    object-fit: cover;
+}
+
+.content {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.content p {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+#body {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+#body .cover {
+    height: 100%;
+    width: 100%;
+    background-image: url('img/half.JPG');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+#body .cover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 41, 60, 0.922);
+    z-index: 10;
+}
+
+#body #content {
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#body #content h2 {
+    font-size: 1.8rem;
+    color: rgb(226, 25, 69);
+    text-shadow: 1px 1px #f1f1f1;
+    margin-top: 20px;
+}
+
+#body #content .letter {
+    margin: 20px;
+    font-size: 1.2rem;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#body #content .letter p {
+    color: #323;
+    font-family: 'Noto Serif Malayalam';
+    line-height: 1.6rem;
+}
+
+.eng {
+    color:rgb(226, 25, 69)
+}
